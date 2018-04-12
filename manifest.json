@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name":    "SIGAA Grid",
+  "version": "1.0",
+  "description": "Extensão capaz de gerenciar e otimizar o processo de matrícula do SIGAA",
+  "author": "Marcos Bomfim",
+  "background": {
+    "persistent": false,
+    "scripts": ["js/background.js"]
+  },
+"options_page": "dashboard.html",
+  "content_scripts": [{
+    "matches":    ["*://sistemas.ufrb.edu.br/sigaa/*", "*://127.0.0.1/*"],
+    "js":         ["js/content.js","js/jquery.min.js", "js/popup.js", "js/material.min.js" ],
+    "css":        ["css/material.min.css"],
+    "run_at":     "document_idle",
+    "all_frames": false
+  }],
+  "icons": { "16": "img/icon16.png",
+             "48": "img/icon64.png",
+            "128": "img/icon128.png" },
+  "browser_action": {
+   "default_icon": "img/icon64.png",
+   "default_popup": "popup.html"
+ },
+ "permissions": [
+   "activeTab","storage"
+   ]
+  // No special permissions required...
+  //"permissions": ["tabs"],
+}

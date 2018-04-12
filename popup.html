@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Imports -->
+
+<link rel="stylesheet" href="css/material.min.css">
+<script src="js/material.min.js"></script>
+<script src="js/popup.js"></script>
+<script src="js/jquery.min.js"></script>
+    <!-- Scripts -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Cascading Style Sheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/popup.css" rel="stylesheet" media="screen">
+
+
+    <style>
+    .demo-card-square.mdl-card {
+      width: 100%;
+    }
+    .demo-card-square > .mdl-card__title {
+      color: #fff;
+      background: bottom right 15% no-repeat #009688;
+      padding-right: 3px;
+      text-align: right;
+    }
+    .mdl-card__supporting-text2 {
+      font-size: 12px;
+    }
+
+    </style>
+
+  </head>
+  <body >
+
+<div class="demo-card-square mdl-card ">
+        <div class="mdl-card__title ">
+          <h2 class="mdl-card__title-text">SIGAA Grid </h2>
+          <i id="tooltip1" style="margin-left: 300px; cursor:pointer;" class="material-icons" id="dashboard" >aspect_ratio</i>
+          <div class = "mdl-tooltip" for = "tooltip1">SIGAA Painel </div>
+        </div>
+        <div class="mdl-card__supporting-text ">
+            <h5><b>Horários:</b></h5>
+            <label class="mdl-checkbox mdl-js-checkbox  mdl-js-ripple-effect" >
+                <input name="check_box" type="checkbox" id="check_manha" class="mdl-checkbox__input" />
+                <p class="mdl-checkbox__label">Manhã</p>
+            </label>
+
+            <label class="mdl-checkbox mdl-js-checkbox  mdl-js-ripple-effect" >
+                <input name="check_box" type="checkbox" id="check_tarde" class="mdl-checkbox__input"  />
+                <p class="mdl-checkbox__label">Tarde</p>
+            </label>
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" >
+                <input name="check_box" type="checkbox" id="check_noite" class="mdl-checkbox__input" />
+                <p class="mdl-checkbox__label">Noite</p>
+            </label>
+        </div>
+
+        <label class="" >
+          <div class="  my_label2 text-left ">
+          Componentes:<i style="cursor:pointer" class="mdl-badge material-icons" id="contador_cmp" data-badge="0">event_note</i>
+          Choques:<i style="cursor:pointer" class="mdl-badge material-icons"  id="contador_conflito" data-badge="0">event_busy </i>
+          </div>
+        </label>
+
+      <div class="mdl-card__actions mdl-card--border">
+        <div id="progressbar" class="mdl-progress mdl-js-progress center-block"></div>
+      </div>
+
+      <div class="mdl-card__supporting-text mdl-card__supporting-text2 ">
+        <b>OBS: </b> O componente prático deverá ser inserido depois do teórico
+      </div>
+
+      <div class="container-fluid">
+      <div class="mdl-card__actions mdl-card--border">
+        <div class="row">
+            <div class="col-sm-12">
+              <div class="text-center">
+                <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" id="interact">Verificar</button>
+                <button  class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" id="createtable" >Adicionar</button>
+                 <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--colored" id="limpar_storage">Limpar</button>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      </div>
+</div>
+<div id="myDynamicTable" >
+</div>
+
+</body>
+<footer class="mdl-mini-footer  mdl-shadow--2dp">
+    <address class="my_label">
+      <h5>SIGAA Grid</h5>
+      <strong>Versão: 1.0 Beta</strong>
+      <strong>© 2018 - Marcos Bomfim </strong><br>
+      <strong>Email: mh4root@gmail.com</strong>
+    </address>
+    <ul class="my_label">
+      <li><a href="https://github.com/mh4x0f/SIGAAGrid/blob/master/README.md" target="_blank">Ajuda</a></li>
+      <li><a href="https://github.com/mh4x0f/SIGAAGrid/blob/master/LICENSE" target="_blank">Licença MIT</a></li>
+      <li><a href="https://github.com/mh4x0f/SIGAAGrid" target="_blank">Código fonte</a></li>
+    </ul>
+</footer>
+<div class="demo-card-square  ">
+    <div class="mdl-card__title ">
+      <h2 class="mdl-card__title-text"> </h2>
+    </div>
+</div>
+</html>

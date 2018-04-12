@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- Imports -->
+
+<link rel="stylesheet" href="css/material.min.css">
+<script src="js/material.min.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/jquery.min.js"></script>
+    <!-- Scripts -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Cascading Style Sheets -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/popup.css" rel="stylesheet" media="screen">
+
+  </head>
+  <body >
+  <div >
+
+<div class="">
+<!-- Square card -->
+<style>
+.demo-card-square.mdl-card {
+  padding-bottom: 6px;
+  width: 100%;
+  height: 100%;
+}
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background: bottom right 15% no-repeat #46B6AC;
+  inline-block;
+  padding-right: 3px;
+}
+.mdl-card__supporting-text2 {
+  font-size: 12px;
+}
+.mdl-card__supporting-text3 {
+  font-size: 13px;
+}
+</style>
+
+<!-- Uses a header that scrolls with the text, rather than staying
+  locked at the top -->
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header mdl-layout__header--scroll">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">SIGAA Grid - Painel</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation -->
+      <a class="mdl-navigation__link" href="#myDynamicTable">Visualizar</a>
+      <a class="mdl-navigation__link" id="aboutApp">Sobre</a>
+      <nav class="mdl-navigation">
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">SIGAA Grid</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="">Atualizar</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+
+      <div class="demo-grid-ruler mdl-grid   ">
+            <div class="mdl-cell mdl-cell--8-col ">
+              <div class"mdl-cell mdl-cell--8-col" id="myDynamicTable" ></div>
+            </div>
+            <div class="mdl-cell mdl-cell--4-col fl-11">
+              <div id="load_teste" class="mdl-card__supporting-text mdl-card mdl-shadow--6dp">
+                <h5><b>Informações:</b></h5>
+                <label class="" >
+                  <p class="mdl-checkbox__label">Componentes:<span style="cursor:pointer" class="mdl-badge material-icons" id="contador_cmp" data-badge="0">event_note</span>
+                  Choques:<span style="cursor:pointer" class="mdl-badge material-icons"  id="contador_conflito" data-badge="0">event_busy </span></p>
+                </label>
+                  <h5><b>Horários:</b></h5>
+                  <label class="mdl-checkbox mdl-js-checkbox  mdl-js-ripple-effect" >
+                      <input type="checkbox" id="check_manha" class="mdl-checkbox__input" />
+                      <p class="mdl-checkbox__label">Manhã</p>
+                  </label>
+
+                  <label class="mdl-checkbox mdl-js-checkbox  mdl-js-ripple-effect" >
+                      <input type="checkbox" id="check_tarde" class="mdl-checkbox__input"  />
+                      <p class="mdl-checkbox__label">Tarde</p>
+                  </label>
+                  <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" >
+                      <input type="checkbox" id="check_noite" class="mdl-checkbox__input" />
+                      <p class="mdl-checkbox__label">Noite</p>
+                  </label>
+                  <div class="">
+                    <!-- List with avatar and controls -->
+                    <style>
+                    .demo-list-control {
+                      width: 360px;
+                    }
+
+                    .demo-list-radio {
+                      display: inline;
+                    }
+                    </style>
+                    <h5><b>Docentes:</b></h5>
+                    <div id="myDynamicTable_prof" ></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </div>
+  </main>
+  <div class="fixed-bottom">
+  <footer class="mdl-mini-footer  mdl-shadow--2dp">
+      <address class="my_label">
+        <h5 >SIGAA Grid</h5>
+        <strong>Versão: 1.0 Beta</strong>
+        <strong>© 2018 - Marcos Bomfim </strong>
+      </address>
+  </footer>
+  </div>
+</div>
+
+</body>
+</html>

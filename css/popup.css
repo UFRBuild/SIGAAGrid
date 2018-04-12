@@ -1,0 +1,318 @@
+/* MIT License
+
+Copyright (c) 2018 Marcos Nesster
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. */
+
+
+/**
+ * Custom CSS
+ *
+ */
+
+.mdl-mini-footer{
+  width: 100%;
+  max-height: 120px !important;
+  padding-bottom: 10px;
+}
+
+ .my_label{
+    padding-right: 30px;
+    padding-left: 18px;
+    color: gray;
+
+ }
+ footer a {
+   color: gray !important;
+ }
+ .my_label2{
+   padding-left: 20px;
+    padding-top: 10px;
+    color: gray;
+ }
+
+ .btn2 {
+     display: inline-block;
+     margin: 0 0 10px 0;
+     padding: 3px 6px;
+     border: medium none;
+     background-color: #535B99;
+     color: #FFFFFF;
+     cursor: pointer;
+     text-align: left;
+     text-decoration: none;
+     white-space: nowrap;
+     &:after {
+       content: attr(data-button-icon);
+       float: right;
+       padding-left: 1em;
+     }
+ }
+
+.my_label2_left{
+  text-align: left;
+}
+
+ .my_componetes_label{
+    vertical-align: sub;
+    padding-left: 10px;
+    margin-left: 10px;
+ }
+
+
+.btn {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 13px;
+  text-align: center;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* Green */
+.verde {
+  border-color: #4CAF50;
+  background: #4CAF50;
+  color: white;
+}
+
+.verde:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+/* new color */
+.verde_claro {
+  border-color: #00cc99;
+  background: #00cc99;
+  color: white;
+}
+
+.verde_claro:hover {
+  background-color: #00cc99;
+  color: white;
+}
+
+/* azul */
+.blue {
+  border-color: #2196F3;
+  color: white;
+  background: #2196F3;
+}
+
+.blue:hover {
+  background: #2196F3;
+  color: white;
+}
+
+/* laranja */
+.laranja {
+  border-color: #ff9800;
+  background: #ff9800;
+  color: white;
+}
+
+.laranja:hover {
+  background: #ff9800;
+  color: white;
+}
+
+/* Red */
+.red {
+  border-color: #f44336;
+  color: white;
+  background: #f44336;
+}
+
+.red:hover {
+  background: #f44336;
+  color: white;
+}
+
+/* RoXU */
+.lilas {
+  border-color: #9933ff;
+  background: #9933ff;
+  color: white;
+}
+
+.lilas:hover {
+  background: #9933ff;
+  color: white;
+}
+
+/* vinho */
+.vinho {
+  border-color: #990033;
+  background: #990033;
+  color: white;
+}
+
+.vinho:hover {
+  background: #990033;
+  color: white;
+}
+
+/* azul */
+.azul {
+  border-color: #f3e721;
+  background: #f3e721;
+  color: white;
+}
+
+.azul:hover {
+  background: #f3e721;
+  color: white;
+}
+
+/* rosa bisouro rola bosta */
+.rosa {
+  border-color: #ff0066;
+  background: #ff0066;
+  color: white;
+}
+
+.rosa:hover {
+  background: #ff0066;
+  color: white;
+}
+
+
+/* marrom*/
+.marrom {
+  border-color: #996633;
+  background: #996633;
+  color: white;
+}
+
+.marrom:hover {
+  background: #996633;
+  color: white;
+}
+
+
+/* Gray */
+.default {
+  border-color: #666699;
+  color: white;
+  background: #666699;
+}
+
+.default:hover {
+  background: #666699;
+}
+
+
+body
+{
+  min-width: 510px;
+  min-height: 200px;
+  height: 200px;
+	font-family: 'RobotoDraft', 'Roboto', 'Helvetica Neue, Helvetica, Arial', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1.4rem;
+	letter-spacing: 0.01rem;
+	color: #212121;
+	background-color: #f5f5f5;*/
+
+}
+
+
+.full-width{
+    width: 100px;
+}
+
+
+
+.mdl-data-table td, th {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+
+.mdl-data-table {
+    table-layout:fixed;
+    width:770px;
+    text-align: center !important;
+
+}
+
+.mdl-data-table th {
+    max-height: 20px !important;
+    text-align: center !important;
+}
+
+.mdl-data-table__cell--non-numeric td{
+    height: 20px !important;
+    min-height: 10px !important;
+    max-height: 10px !important;
+    padding: 0em !important;
+}
+
+.mdl-checkbox {
+  display: inline-block;
+  width: 100px;
+  position: relative;
+  float: left;
+}
+
+
+.mdl-button {
+  font-weight: bold !important;
+}
+
+.mdl-progress{
+  width: 400px !important;
+}
+
+.mdl-card__supporting-text {
+  padding-top: 0px !important;
+}
+
+
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fonts.woff2') format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
