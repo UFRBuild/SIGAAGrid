@@ -26,6 +26,7 @@ var data = {};
 var domInfo = { // dict with all row table
   rows: data
 };
+
 //
 chrome.runtime.sendMessage({
   // request id tab load
@@ -47,7 +48,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, response) {
   }
 });
 
-row_OnClick("lista-turmas") //lista-turmas id table SIGAA
+row_OnClick("lista-turmas-curriculo") //lista-turmas id table SIGAA
 function row_OnClick(tblId) {
     console.log("hooking all row the table list");
     try { // add hook in all row tr and td
@@ -142,8 +143,19 @@ function selectRow(row) {
    // select row and save data to send for popup
    count_compomentes();
    console.log("checking status checkbox row...");
-   console.log(row)
-   if (row.cells[0].firstChild.checked){
+   console.log(row.cells[2]);
+   var textfield = row.cells[2].getElementsByTagName("input")[0];
+
+   var turma = row.cells[3].textContent.split("\n")[2];
+   var horario = row.cells[5].textContent;
+   var professor = row.cells[4].textContent;
+   //turma = turma.replace(/\s+/g,'');
+   //professor = professor.replace(/\s+/g
+   console.log(turma);
+   console.log(professor);
+   console.log(horario);
+
+   if (textfield.checked){
        var componente = prompt("Qual código do Componente ?", "Componente Curricular");
         if (componente != null) {
           if (!(componente in data)){
@@ -151,8 +163,8 @@ function selectRow(row) {
               row.cells[y].style.backgroundColor = "#46B6AC";
             }
             console.log("add componente teorica...");
-            data[componente] = {'professor': row.cells[2].textContent, 'horario':
-            row.cells[6].textContent, 'turma': row.cells[1].textContent};
+            data[componente] = {'professor': professor, 'horario':
+            horario, 'turma': turma};
           }
           else{
             var resp = confirm("Componente Pratico ?");
@@ -162,16 +174,17 @@ function selectRow(row) {
                 row.cells[y].style.backgroundColor = "#46B6AC";
               }
               data[componente]["horario"] = rmSpaceHorario(data[componente]["horario"],false);
-              if (!contains.call(row.cells[6].textContent,data[componente]["horario"])){
-                data[componente]["horario"] += row.cells[6].textContent;
+              if (!contains.call(horario,data[componente]["horario"])){
+                data[componente]["horario"] += horario;
               }
-              data[componente+" P"] = {'professor': row.cells[2].textContent, 'horario':
-              row.cells[6].textContent, 'turma': row.cells[1].textContent, 'pratica':"true"};
+              data[componente+" P"] = {'professor': professor, 'horario':
+              horario, 'turma': turma, 'pratica':"true"};
             }
             else{
               console.log("compomente has been added...");
               alert("Esse componente á foi adicionada!");
               row.cells[0].firstChild.checked = false;
+              textfield.checked = false;
             }
           }
         }
@@ -180,8 +193,8 @@ function selectRow(row) {
        for (var y = 0; y < row.cells.length; y++) {
           row.cells[y].style.background = "none";
        }
-       var temp = {'professor': row.cells[2].textContent, 'horario':
-       row.cells[6].textContent, 'turma': row.cells[1].textContent};
+       var temp = {'professor': professor, 'horario':
+       horario, 'turma': turma};
 
        delete_select_row(data, temp);
    }

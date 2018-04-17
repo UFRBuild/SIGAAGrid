@@ -172,6 +172,7 @@ function limpar_storage_data(){
       }
     });
     compo_info = {};
+    conflito_h = {};
     ChangeStateButton(false);
     ChangeStateBtn_Interact(true);
 
@@ -393,10 +394,12 @@ function add_componentes(){
         ChangeStateBtn_Interact(false);
         save_storage_chrome();
       }
+      console.log(Object.keys(conflito_h).length);
       if (conflito_h != {}){
         var conflito  = document.getElementById('contador_conflito');
         conflito.setAttribute("data-badge",Object.keys(conflito_h).length);
       }
+
     }
 }
 
