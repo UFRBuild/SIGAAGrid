@@ -11,8 +11,7 @@
 "options_page": "dashboard.html",
   "content_scripts": [{
     "matches":    ["*://sistemas.ufrb.edu.br/sigaa/*", "*://127.0.0.1/*"],
-    "js":         ["js/content.js","js/jquery.min.js", "js/popup.js", "js/material.min.js" ],
-    "css":        ["css/material.min.css"],
+    "js":         ["js/content.js","js/jquery.min.js", "js/popup.js" ],
     "run_at":     "document_idle",
     "all_frames": false
   }],
